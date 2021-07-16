@@ -1,0 +1,512 @@
+* {
+  box-sizing: border-box;
+
+  color: black;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#mainContainer {
+  position: absolute;
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+}
+
+.mainText {
+  color: black;
+}
+
+#inputContainer {
+  position: absolute;
+    width: 50%;
+    top: 40%;
+    left: 50%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#forcaContainer {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  padding-bottom: 2%;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.forcaLetter {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: solid 1px;
+  box-shadow: 3px 3px 5px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#chegadaCofre {
+  position: absolute;
+  text-align: center;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#aberturaCofre {
+  background-color: white;
+  position: absolute;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#forcaKeyboard {
+  background: white;
+  padding-top: 100px;
+}
+
+.keyboardRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+#pergunta {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.respostas {
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
+}
+
+#respostasContainer {
+  position: relative;
+}
+
+.submit {
+  color: black;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.casaContainer {
+  display: flex;
+}
+
+.casaRow {
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+}
+
+#casaAtual {
+  color: black;
+}
+
+#levelSelectorText {
+  color: black;
+}
+
+#levelSelector {
+  position: absolute;
+  width: 50%;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nivelResposta {
+  color: black;
+}
+
+table {
+  width: 100%;
+}
+
+.casa {
+  background: aqua;
+  width: 10%;
+  border: 1px black;
+  padding: 20px;
+}
+
+.casa:after {
+  content: "";
+  display: block;
+  padding-bottom: 90%;
+}
+
+td,
+.casa {
+  padding: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: black;
+  text-align: right;
+  margin: 0 5px;
+}
+/*Casa 5 ---------------------------------------------------------------------------------------*/
+#casa5 {
+  background-image: url(img/santa_maria.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 9 ---------------------------------------------------------------------------------------*/
+#casa9 {
+  background-image: url(img/ilheu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 14 ---------------------------------------------------------------------------------------*/
+#casa14 {
+  background-image: url(img/terceira.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 18 ---------------------------------------------------------------------------------------*/
+#casa18 {
+  background-image: url(img/graciosa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 21 ---------------------------------------------------------------------------------------*/
+#casa21 {
+  background-image: url(img/sao_jorge.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 27 ---------------------------------------------------------------------------------------*/
+#casa27 {
+  background-image: url(img/montanha_pico.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 32 ---------------------------------------------------------------------------------------*/
+#casa32 {
+  background-image: url(img/flores.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Casa 34 ---------------------------------------------------------------------------------------*/
+#casa34 {
+  background-image: url(img/corvo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Butoes ---------------------------------------------------------------------------------------*/
+#buttons {
+  padding-top: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#rollButton {
+  cursor: pointer;
+}
+
+#rollButton:hover {
+  position: relative;
+}
+
+#rollButton:active {
+  position: relative;
+  transform: translateY(4px);
+}
+
+#store {
+  cursor: pointer;
+}
+#storeButton:hover {
+  position: relative;
+}
+#storeButton:active {
+  position: relative;
+  transform: translateY(4px);
+}
+#howtoplay {
+  cursor: pointer;
+}
+#howtoplayButton:hover {
+  position: relative;
+}
+#howtoplayButton:active {
+  position: relative;
+  transform: translateY(4px);
+}
+#stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#placeholder {
+  visibility: hidden;
+}
+
+#inventory {
+  background-color: white;
+  text-align: center;
+}
+
+#inventoryText {
+  color: black;
+}
+
+#gameOver {
+  position: absolute;
+  width: 50%;
+  top: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#gameOverText {
+  color: black;
+}
+
+/* Parte da Loja */
+
+#lojaContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-around;
+}
+
+#carrinho {
+  position: fixed;
+  right: 5px;
+}
+#end_btn {
+  bottom: 50%;
+  right: 20px;
+  position: fixed;
+}
+
+.main-header {
+  background-color: white;
+  padding-bottom: 30px;
+}
+
+.band-name {
+  text-align: center;
+  margin: 0;
+  color: black;
+}
+
+.content-section {
+  margin: 1em;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.section-header {
+  background-color: white;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+
+.about-band-image {
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+  border-radius: 50%;
+}
+
+#fin {
+  display: flex;
+}
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.67em 0.67em;
+  cursor: pointer;
+}
+
+.shop-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 5px;
+}
+
+.shop-item-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.shop-item-image {
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shop-item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.shop-item-price {
+  flex-grow: 1;
+  color: black;
+}
+
+.shop-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-header {
+  font-weight: bold;
+  color: black;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+#buy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+.cart-row {
+  display: flex;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  color: black;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: black;
+  margin-left: 0.5em;
+}
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 0;
+  text-align: center;
+  margin-right: 25px;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: black;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+}

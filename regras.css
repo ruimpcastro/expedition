@@ -1,0 +1,19 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: #efefef;
+}
+.container {
+    margin: 0 300px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+header {
+    bottom: 50%;
+    right: 20px;
+    position: fixed;
+ }

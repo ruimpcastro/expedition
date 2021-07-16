@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expedition</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="questions.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Material Design -->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.blue_grey-red.min.css"
+    />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div id="inputContainer">
+        <h2 id="pergunta">Lorem ipsum?</h2>
+        <div id="respostasContainer">
+          <input type="radio" id="opcaoA" name="resposta" value="0" />
+          <label class="respostas" id="respostaA" for="opcaoA">Resposta A</label
+          ><br />
+          <input type="radio" id="opcaoB" name="resposta" value="1" />
+          <label class="respostas" id="respostaB" for="opcaoB">Resposta B</label
+          ><br />
+          <input type="radio" id="opcaoC" name="resposta" value="2" />
+          <label class="respostas" id="respostaC" for="opcaoC">Resposta C</label
+          ><br />
+          <input type="radio" id="opcaoD" name="resposta" value="3" />
+          <label class="respostas" id="respostaD" for="opcaoD">Resposta D</label
+          ><br />
+          <input
+            type="button"
+            class="
+              submit
+              mdl-button mdl-js-button
+              mdl-button--raised
+              mdl-js-ripple-effect
+            "
+            id="buttonResposta"
+            value="Submeter"
+          />
+        </div>
+      </div>
+
+      <div id="levelSelector">
+        <h1 id="casaAtual">Placeholder</h1>
+        <h2 id="levelSelectorText">Selecione o nível da pergunta</h2>
+        <input type="radio" id="nivel1" name="nivel" value="1" />
+        <label class="nivelResposta" id="nivel1Label" for="nivel1"
+          >Nível 1 (1 moeda)</label
+        ><br />
+        <input type="radio" id="nivel2" name="nivel" value="2" />
+        <label class="nivelResposta" id="nivel2Label" for="nivel2"
+          >Nível 2 (2 moedas)</label
+        ><br />
+        <input type="radio" id="nivel3" name="nivel" value="3" />
+        <label class="nivelResposta" id="nivel3Label" for="nivel3"
+          >Nível 3 (3 moedas)</label
+        ><br />
+        <input
+          type="button"
+          class="
+            submit
+            mdl-button mdl-js-button
+            mdl-button--raised
+            mdl-js-ripple-effect
+          "
+          id="submitNivel"
+          value="Submeter"
+        />
+      </div>
+
+      <div id="gameOver">
+        <h1 id="gameOverText">PERDEU O JOGO!</h1>
+        <input
+          type="button"
+          class="
+            submit
+            mdl-button mdl-js-button
+            mdl-button--raised
+            mdl-js-ripple-effect
+          "
+          id="reiniciar"
+          value="Reiniciar"
+        />
+      </div>
+
+      <div>
+        <div class="casaRow">
+          <div class="casa" id="casa1">1</div>
+          <div class="casa" id="casa2">2</div>
+          <div class="casa" id="casa3">3</div>
+          <div class="casa" id="casa4">4</div>
+          <div class="casa" id="casa5">5</div>
+          <div class="casa" id="casa6">6</div>
+          <div class="casa" id="casa7">7</div>
+          <div class="casa" id="casa8">8</div>
+          <div class="casa" id="casa9">9</div>
+          <div class="casa" id="casa10">10</div>
+        </div>
+        <div class="casaRow">
+          <div class="casa" id="casa11">11</div>
+          <div class="casa" id="casa12">12</div>
+          <div class="casa" id="casa13">13</div>
+          <div class="casa" id="casa14">14</div>
+          <div class="casa" id="casa15">15</div>
+          <div class="casa" id="casa16">16</div>
+          <div class="casa" id="casa17">17</div>
+          <div class="casa" id="casa18">18</div>
+          <div class="casa" id="casa19">19</div>
+          <div class="casa" id="casa20">20</div>
+        </div>
+        <div class="casaRow">
+          <div class="casa" id="casa21">21</div>
+          <div class="casa" id="casa22">22</div>
+          <div class="casa" id="casa23">23</div>
+          <div class="casa" id="casa24">24</div>
+          <div class="casa" id="casa25">25</div>
+          <div class="casa" id="casa26">26</div>
+          <div class="casa" id="casa27">27</div>
+          <div class="casa" id="casa28">28</div>
+          <div class="casa" id="casa29">29</div>
+          <div class="casa" id="casa30">30</div>
+        </div>
+        <div class="casaRow">
+          <div class="casa" id="casa31">31</div>
+          <div class="casa" id="casa32">32</div>
+          <div class="casa" id="casa33">33</div>
+          <div class="casa" id="casa34">34</div>
+          <div class="casa" id="casa35">35</div>
+          <div class="casa" id="casa36">36</div>
+          <div class="casa" id="casa37">37</div>
+          <div class="casa" id="casa38">38</div>
+          <div class="casa" id="casa39">39</div>
+          <div class="casa" id="casa40">40</div>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button
+          id="rollButton"
+          class="
+            mainText
+            mdl-button mdl-js-button
+            mdl-button--raised
+            mdl-js-ripple-effect
+          "
+        >
+          Atirar dado
+        </button>
+        <button
+          id="store"
+          class="
+            mainText
+            mdl-button mdl-js-button
+            mdl-button--raised
+            mdl-js-ripple-effect
+          "
+          onclick="restart()"
+        >
+          Reiniciar
+        </button>
+        <button
+          id="howtoplay"
+          class="
+            mainText
+            mdl-button mdl-js-button
+            mdl-button--raised
+            mdl-js-ripple-effect
+          "
+          onclick="window.location.href= 'regras.html'"
+        >
+          Regras
+        </button>
+      </div>
+      <div id="stats" class="mainText">
+        <h3 id="lastroll" class="mainText">Dado: 0</h3>
+        <h3 id="vidas" class="mainText">Vidas: 5</h3>
+        <h3 id="moedas" class="mainText">Dinheiro: 0</h3>
+      </div>
+      <div id="placeholder">
+        <h3 class="mainText">.</h3>
+      </div>
+      <div id="inventory">
+        <h5 id="inventoryText">Inventário</h5>
+      </div>
+    </div>
+
+    <div id="forcaContainer">
+      <h1 id="forcaTitle" class="mainText">Teste</h1>
+      <h2 id="palavraForca" class="mainText">???? ??? ??????</h2>
+      <table id="forcaKeyboard">
+        <tr class="keyboardRow">
+          <th id="A" class="forcaLetter">A</th>
+          <th id="B" class="forcaLetter">B</th>
+          <th id="C" class="forcaLetter">C</th>
+          <th id="D" class="forcaLetter">D</th>
+          <th id="E" class="forcaLetter">E</th>
+          <th id="F" class="forcaLetter">F</th>
+          <th id="G" class="forcaLetter">G</th>
+        </tr>
+        <tr class="keyboardRow">
+          <th id="H" class="forcaLetter">H</th>
+          <th id="I" class="forcaLetter">I</th>
+          <th id="J" class="forcaLetter">J</th>
+          <th id="K" class="forcaLetter">K</th>
+          <th id="L" class="forcaLetter">L</th>
+          <th id="M" class="forcaLetter">M</th>
+          <th id="N" class="forcaLetter">N</th>
+        </tr>
+        <tr class="keyboardRow">
+          <th id="O" class="forcaLetter">O</th>
+          <th id="P" class="forcaLetter">P</th>
+          <th id="Q" class="forcaLetter">Q</th>
+          <th id="R" class="forcaLetter">R</th>
+          <th id="S" class="forcaLetter">S</th>
+          <th id="T" class="forcaLetter">T</th>
+          <th id="U" class="forcaLetter">U</th>
+        </tr>
+        <tr class="keyboardRow">
+          <th id="V" class="forcaLetter">V</th>
+          <th id="W" class="forcaLetter">W</th>
+          <th id="X" class="forcaLetter">X</th>
+          <th id="Y" class="forcaLetter">Y</th>
+          <th id="Z" class="forcaLetter">Z</th>
+          <th id="Ç" class="forcaLetter">Ç</th>
+        </tr>
+      </table>
+      <h3 id="tentativasText" class="mainText">Tentativas: 6</h3>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="ajuda_btn"
+        type="button"
+        onclick="ajuda()"
+      >
+        Ajuda (2 moedas)
+      </button>
+    </div>
+
+    <div id="chegadaCofre">
+      <h1 id="tituloChegadaCofre" class="mainText">Chegou ao cofre! yay</h1>
+      <h3 id="textChegadaCofre" class="mainText">
+        uasdnuafuasjdasfjasoidjsaoijdoia
+      </h3>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="irEmbora"
+        type="button"
+        onclick="irEmbora()"
+      >
+        Sair (-1 vida)
+      </button>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="abrirCofre"
+        type="button"
+        onclick="clickedOpenChest()"
+      >
+        Abrir Cofre
+      </button>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="jogarForca"
+        type="button"
+        onclick="jogarForca()"
+      >
+        Fazer tarefa
+      </button>
+    </div>
+
+    <div id="aberturaCofre">
+      <h1 id="tituloAberturaCofre" class="mainText">Abrir o Cofre</h1>
+      <button
+        class="mainText
+        mdl-button mdl-js-button
+        mdl-button--raised
+        mdl-js-ripple-effect"
+        id="voltarAtras"
+        type="button"
+        onclick="cancelarAbrirCofre()"
+      >
+        Voltar atrás
+      </button>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="chave1"
+        type="button"
+        onclick="clickedOpenChestButton(0)"
+      >
+        Usar a chave 1
+      </button>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="chave2"
+        type="button"
+        onclick="clickedOpenChestButton(1)"
+      >
+        Usar a chave 2
+      </button>
+      <button
+        class="
+          mainText
+          mdl-button mdl-js-button
+          mdl-button--raised
+          mdl-js-ripple-effect
+        "
+        id="chave3"
+        type="button"
+        onclick="clickedOpenChestButton(2)"
+      >
+        Usar a chave 3
+      </button>
+    </div>
+
+    <!-- PARTE DA LOJA -->
+
+    <div id="lojaContainer">
+      <header class="main-header">
+        <button
+          class="
+            btn
+            mdl-button mdl-js-button
+            mdl-button--raised
+            mdl-js-ripple-effect
+          "
+          id="end_btn"
+          type="button"
+          onclick="mainTransition()"
+        >
+          Sair da Loja
+        </button>
+        <h1 class="band-name band-name-large">Loja</h1>
+      </header>
+
+      <h1 id="moedasLoja" style="text-align: center">Dinheiro:</h1>
+
+      <section class="container content-section">
+        <section class="container content-section">
+          <h2 class="section-header">Chaves</h2>
+
+          <div class="shop-items">
+            <div class="shop-item">
+              <span class="shop-item-title">Chave 1</span>
+              <img class="shop-item-image" src="img/chave1.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">5 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Chave 2</span>
+              <img class="shop-item-image" src="img/chave2.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">5 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Chave 3</span>
+              <img class="shop-item-image" src="img/chave3.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">5 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container content-section">
+          <h2 class="section-header">Bem essenciais</h2>
+
+          <div class="shop-items">
+            <div class="shop-item">
+              <span class="shop-item-title">Cordas</span>
+              <img class="shop-item-image" src="img/corda.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Máscaras</span>
+              <img class="shop-item-image" src="img/mascara.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Protetor solar</span>
+              <img
+                class="shop-item-image"
+                src="img/protetor_solar.jpeg"
+                alt=""
+              />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Recordações várias</span>
+              <img class="shop-item-image" src="img/recordacoes.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">1 moeda</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Garrafa de água</span>
+              <img class="shop-item-image" src="img/garrafa_agua.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">1 moeda</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container content-section">
+          <h2 class="section-header">Aventuras e Viagens Guiadas</h2>
+
+          <div class="shop-items">
+            <div class="shop-item">
+              <span class="shop-item-title">Ilhéu de V. Franca</span>
+              <img class="shop-item-image" src="img/viagem_barco.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">3 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Subida ao Pico</span>
+              <img class="shop-item-image" src="img/subida_pico.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">3 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Whale Watching</span>
+              <img
+                class="shop-item-image"
+                src="img/whale-watching.jpeg"
+                alt=""
+              />
+              <div class="shop-item-details">
+                <span class="shop-item-price">3 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Vulcão dos Capelinhos</span>
+              <img
+                class="shop-item-image"
+                src="img/vulcao_capelinhos.jpeg"
+                alt=""
+              />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Rocha dos Bordões</span>
+              <img
+                class="shop-item-image"
+                src="img/rocha_bordoes.jpeg"
+                alt=""
+              />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Fajã do S. Cristo</span>
+              <img class="shop-item-image" src="img/santo_cristo.jpeg" alt="" />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Lagoa do Caldeirão</span>
+              <img
+                class="shop-item-image"
+                src="img/lagoa_caldeirao.jpeg"
+                alt=""
+              />
+              <div class="shop-item-details">
+                <span class="shop-item-price">2 moedas</span>
+                <button
+                  class="
+                    btn btn-primary
+                    shop-item-button
+                    mdl-button mdl-js-button
+                    mdl-button--raised
+                    mdl-js-ripple-effect
+                  "
+                  type="button"
+                >
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container content-section">
+          <h2 class="section-header">Carrinho</h2>
+          <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Item</span>
+            <span class="cart-price cart-header cart-column">Preço</span>
+            <span class="cart-quantity cart-header cart-column"
+              >Quantidade</span
+            >
+          </div>
+          <div class="cart-items"></div>
+          <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">0</span>
+          </div>
+          <div id="buy">
+            <button
+              id="fin"
+              class="
+                btn-primary btn-purchase
+                mdl-button mdl-js-button
+                mdl-button--raised
+                mdl-js-ripple-effect
+              "
+              type="button"
+            >
+              Comprar
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <footer class="main-footer" style="text-align: center"></footer>
+
+      <script>
+        esconderInput(); 
+        esconderLevelSelector(); 
+        esconderGameOver(); 
+        let board = new Board();
+        esconderLoja();
+        mostrarMain();
+        esconderChegadaCofre();
+        esconderAberturaCofre();
+        createRollButton();
+        prepararForca();
+        esconderForca();
+      </script>
+    </div>
+  </body>
+</html>
